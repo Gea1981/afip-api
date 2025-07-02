@@ -10,8 +10,8 @@ SERVICE = "wsfe"
 WSDL = "https://wsaa.afip.gov.ar/ws/services/LoginCms?WSDL"  # PRODUCCIÓN
 
 def create_tra(service):
-    now = datetime.datetime.now()
-    expire = now + datetime.timedelta(minutes=600)
+    now = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(minutes=5)
+    expire = now + datetime.timedelta(minutes=10)
 
     tra = etree.Element("loginTicketRequest", version="1.0")
     header = etree.SubElement(tra, "header")
