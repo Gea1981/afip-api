@@ -6,6 +6,10 @@ from factura_pdf import generar_pdf
 
 app = FastAPI()
 
+@app.get("/")
+def root():
+    return {"mensaje": "API AFIP funcionando correctamente"}
+
 @app.post("/emitir")
 def emitir_factura(data: FacturaRequest):
     try:
