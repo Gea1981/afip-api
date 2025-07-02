@@ -2,7 +2,7 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-# Instalar herramientas necesarias y dependencias de sistema
+# Instalar herramientas necesarias del sistema
 RUN apt-get update && apt-get install -y \
     gcc \
     libpq-dev \
@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y \
 
 COPY . .
 
-# Instalamos dependencias de Python
+# Instalación de dependencias Python
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
 EXPOSE 8000
