@@ -2,9 +2,10 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-# Instalamos herramientas de compilación y dependencias de xmlsec
+# Instalar herramientas necesarias y dependencias de sistema
 RUN apt-get update && apt-get install -y \
     gcc \
+    libpq-dev \
     build-essential \
     libxml2-dev \
     libxmlsec1-dev \
@@ -14,6 +15,7 @@ RUN apt-get update && apt-get install -y \
 
 COPY . .
 
+# Instalamos dependencias de Python
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
 EXPOSE 8000
