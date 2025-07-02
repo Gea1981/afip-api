@@ -3,3 +3,5 @@ xmlsec
 lxml
 reportlab
 qrcode
+fastapi
+uvicorn
