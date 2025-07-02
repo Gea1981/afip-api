@@ -1,0 +1,5 @@
+zeep
+xmlsec
+lxml
+reportlab
+qrcode
