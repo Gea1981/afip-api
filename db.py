@@ -4,9 +4,9 @@ from datetime import datetime
 
 # 🔧 Reemplazá estos datos por los reales de tu VM
 DB_HOST = "vps-5040092-x.dattaweb.com"
-DB_PORT = 5594
+DB_PORT = 5432
 DB_NAME = "hss_ventas_vacia"
-DB_USER = "root"
+DB_USER = "hssventas"
 DB_PASSWORD = "Mth.99Spwd_1099.Txt"
 
 def guardar_comprobante(data: FacturaRequest, resultado: dict):
